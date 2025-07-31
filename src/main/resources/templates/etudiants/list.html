@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Liste des étudiants</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="mb-4">Liste des Étudiants</h2>
+
+    <a href="/etudiants/add" class="btn btn-primary mb-3">Ajouter un étudiant</a>
+
+
+    <table class="table table-striped">
+        <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+            <th>Date de naissance</th>
+            <th>Filière</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="etudiant : ${etudiants}">
+            <td th:text="${etudiant.id}">1</td>
+            <td th:text="${etudiant.nom}">Nom</td>
+            <td th:text="${etudiant.prenom}">Prénom</td>
+            <td th:text="${etudiant.email}">email@example.com</td>
+            <td th:text="${etudiant.dateNaissance}">2000-01-01</td>
+            <td th:text="${etudiant.filiereId}">Filière</td>
+            <td>
+                <a th:href="@{'/etudiants/edit/' + ${etudiant.id}}" class="btn btn-sm btn-warning">Modifier</a>
+                <a th:href="@{/etudiants/details/{id}(id=${etudiant.id})}" class="btn btn-sm btn_info">Voir</a>
+                <form th:action="@{'/etudiants/delete/' + ${etudiant.id}}" method="post" style="display:inline;"
+                      onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cet étudiant ?');">
+                    <input type="hidden" name="_method" value="delete"/>
+                    <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

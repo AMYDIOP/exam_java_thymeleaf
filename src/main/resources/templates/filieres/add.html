@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ajouter une Filière</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+<h2 class="mb-4">Ajouter une Filière</h2>
+
+<form th:action="@{/filieres/save}" th:object="${filiere}" method="post" class="border p-4 rounded shadow">
+    <div class="mb-3">
+        <label for="code" class="form-label">Code</label>
+        <input type="text" th:field="*{code}" id="code" class="form-control" placeholder="Code de la filière" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="intitule" class="form-label">Intitulé</label>
+        <input type="text" th:field="*{intitule}" id="intitule" class="form-control" placeholder="Intitulé de la filière" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+    <a th:href="@{/filieres}" class="btn btn-secondary ms-2">Annuler</a>
+</form>
+
+</body>
+</html>
