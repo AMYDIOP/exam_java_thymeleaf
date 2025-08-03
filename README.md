@@ -1,9 +1,38 @@
+
+exam_java_thymeleaf
+Application web Spring Boot + Thymeleaf pour la gestion des étudiants et des filières.
+
+# Fonctionnalités
+Liste des étudiants et filières
+Ajout d’un étudiant ou d’une filière
+Modification des données
+Suppression
+Visualisation des détails
+Connexion à une base de données MySQL
+## Technologies utilisées
+
+Java 17
+Spring Boot
+Spring Data JPA
+Spring MVC
+Thymeleaf
+Lombok
+Bootstrap 5
+MySQL
+# Installation
+Prérequis
+Java JDK 17+
+Maven
+MySQL installé et en fonctionnement
+Execution du projet
+mvn spring-boot:run
 ## Base de Donnes##
 <img width="499" height="272" alt="image" src="https://github.com/user-attachments/assets/d0ed4648-2606-41f0-98cf-bf46e0daebbe" />
 
 <img width="945" height="319" alt="image" src="https://github.com/user-attachments/assets/3ac33ec7-1e3c-47aa-bd08-d6b5b9a03665" />
 
-# QUELQUES INTERFACES POUR ETUDIANT##
+# Aperçu de l'application
+# Voici quelques captures d’écran de l’interface :
 # Ajout ETUDIANT##
 <img width="945" height="1182" alt="image" src="https://github.com/user-attachments/assets/982a39fa-bdc1-4112-98dc-518685d78731" />
 
