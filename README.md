@@ -46,6 +46,9 @@ mvn spring-boot:run
 <img width="945" height="498" alt="image" src="https://github.com/user-attachments/assets/8a32e552-71ad-41f4-af68-1d8e4da6e090" />
 
 ## QUELQUES CAPTURES POUR FILIERES##
+# AJOUT FILIERE 
+<img width="1435" height="351" alt="image" src="https://github.com/user-attachments/assets/b4cdabd3-31d0-4121-af7c-c6a94d53b72a" />
+
 # LISTE FILIERE
 <img width="945" height="359" alt="image" src="https://github.com/user-attachments/assets/0d8f64ba-6772-43b2-b196-f6f6f9c40d2d" />
 
